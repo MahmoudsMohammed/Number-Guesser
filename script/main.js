@@ -32,15 +32,33 @@ container.addEventListener('change', (e) => {
   }
 });
 
+// Play again
+container.addEventListener('mousedown', (e) => {
+  if (e.target.className === 'rePlay') {
+    window.location.reload();
+  }
+});
+
 // Event On Input Field
 btn.addEventListener('click', checkNumber);
 
 // Function Check For Correct Number
 function checkNumber(e) {
   let number = +guess.value;
+  --guessLeft;
   // You Win
   if (number === trueNumber) {
     showMessage(`${number} is correct, YOU WIN!`, 'green');
+  } else if (guessLeft === 0) {
+    guess.disabled = true;
+    showMessage(
+      `Game Over, you lost. The correct number was ${trueNumber}`,
+      'red'
+    );
+    btn.textContent = 'Play Again';
+    btn.className = 'rePlay';
+  }else{
+    
   }
 }
 
