@@ -1,0 +1,9 @@
+@use './scss/helpers' as *;
+@use './scss/variables' as *;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
