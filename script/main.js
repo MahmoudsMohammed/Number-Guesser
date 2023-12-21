@@ -32,4 +32,28 @@ container.addEventListener('change', (e) => {
   }
 });
 
+// Event On Input Field
+btn.addEventListener('click', checkNumber);
 
+// Function Check For Correct Number
+function checkNumber(e) {
+  let number = +guess.value;
+  // You Win
+  if (number === trueNumber) {
+    showMessage(`${number} is correct, YOU WIN!`, 'green');
+  }
+}
+
+// Function Create Random Number
+function createRandom(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+// Function Show Message
+function showMessage(msg, color) {
+  guess.style.borderColor = color;
+  result.style.display = 'block';
+  result.textContent = msg;
+  result.style.backgroundColor = color === 'green' ? '#10d389' : '#f8d7da';
+  result.style.color = color;
+}

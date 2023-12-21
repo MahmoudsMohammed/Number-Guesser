@@ -1,5 +1,3 @@
-@use './scss/helpers' as *;
-
 * {
   box-sizing: border-box;
 }
@@ -12,9 +10,15 @@ body {
 }
 .container {
   & {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
     box-shadow: 2px 2px 5px rgba(#777, 0.2), -2px -2px 5px rgba(#777, 0.2);
     border-radius: 4px;
     padding-bottom: 20px;
+    width: 400px;
+    max-width: 100%;
   }
   h1 {
     text-align: center;
