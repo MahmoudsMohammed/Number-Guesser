@@ -16,5 +16,26 @@
     <link rel="stylesheet" href="style/main.css" />
     <title>Numbe-Guesser</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1>Number Guesser</h1>
+      <p>Play Mode :</p>
+      <input type="radio" name="option" id="fixed" value="fixed" />
+      <label for="fixed">Fixed Range</label>
+      <input type="radio" name="option" id="dynamic" value="dynamic" />
+      <label for="dynamic">Dynamic Range</label>
+      <div class="dynamic">
+        <label for="min">Min:</label>
+        <input type="number" name="min" id="min" />
+        <label for="max">Max:</label>
+        <input type="number" name="max" id="max" />
+      </div>
+      <div class="process">
+        <p>Guess a number between <span id="start"></span> and <span id="end"></span></p>
+        <input type="number" name="" id="" />
+        <button>Submit</button>
+        <p></p>
+      </div>
+    </div>
+  </body>
 </html>
