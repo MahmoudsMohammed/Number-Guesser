@@ -20,9 +20,14 @@
     <div class="container">
       <h1>Number Guesser</h1>
       <span>Range Mode :</span>
-      <input type="radio" name="option" id="fixed" value="fixed" checked />
+      <input
+        type="radio"
+        name="option"
+        id="fixed"
+        value="fixed"
+      />
       <label for="fixed">Fixed</label>
-      <input type="radio" name="option" id="dynamic" value="dynamic" />
+      <input type="radio" name="option" id="dynamic" value="dynamic"/>
       <label for="dynamic">Dynamic</label>
       <div class="dynamic">
         <div>
@@ -39,10 +44,11 @@
           Guess a number between <span id="start">1</span> and
           <span id="end">10</span>
         </p>
-        <input type="number" name="" id="" />
+        <input type="number" name="guess" id="guess" />
         <button>Submit</button>
-        <p></p>
+        <p id="result"></p>
       </div>
     </div>
+    <script src="script/main.js"></script>
   </body>
 </html>
