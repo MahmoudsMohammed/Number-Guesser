@@ -27,13 +27,14 @@
       <div class="dynamic">
         <div>
           <label for="min">Min:</label>
-          <input type="number" name="min" id="min" />
+          <input type="number" name="min" id="min"/>
         </div>
         <div>
           <label for="max">Max:</label>
-          <input type="number" name="max" id="max" />
+          <input type="number" name="max" id="max" disabled />
         </div>
       </div>
+      <button id="play">Start Play</button>
       <div class="process">
         <p>
           Guess a number between <span id="start">1</span> and
@@ -45,7 +46,7 @@
           id="guess"
           placeholder="Enter your guess"
         />
-        <button>Submit</button>
+        <button id="submit">Submit</button>
         <p id="result"></p>
       </div>
     </div>

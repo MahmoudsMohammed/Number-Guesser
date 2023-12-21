@@ -26,6 +26,18 @@ body {
     margin-bottom: 30px;
   }
   > {
+    button:nth-of-type(1) {
+      display: none;
+      width: fit-content;
+      margin: auto {
+        bottom: 20px;
+      }
+      padding: 10px 30px;
+      background-color: #343a40;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
     span {
       font-weight: bold;
     }
