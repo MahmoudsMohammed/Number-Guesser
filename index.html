@@ -20,14 +20,20 @@
     <div class="container">
       <h1>Number Guesser</h1>
       <span>Range Mode :</span>
-      <input type="radio" name="option" id="fixed" value="fixed" />
-      <label for="fixed">Fixed</label>
-      <input type="radio" name="option" id="dynamic" value="dynamic" />
-      <label for="dynamic">Dynamic</label>
+      <div class="mode">
+        <div>
+          <input type="radio" name="option" id="fixed" value="fixed" />
+          <label for="fixed">Fixed</label>
+        </div>
+        <div>
+          <input type="radio" name="option" id="dynamic" value="dynamic" />
+          <label for="dynamic">Dynamic</label>
+        </div>
+      </div>
       <div class="dynamic">
         <div>
           <label for="min">Min:</label>
-          <input type="number" name="min" id="min"/>
+          <input type="number" name="min" id="min" />
         </div>
         <div>
           <label for="max">Max:</label>
