@@ -15,24 +15,25 @@ Number guesser game with two options fixed or dynamic range and 3 tries of playi
 
 ## Overview
 
-### The Todo-List features
+### The Number-Guesser features
 
 Users should be able to:
 
-- Add New Task to the list and see an alert if you want to add to the list without writing a task.
-- Filter the list to reach a specific task with an insensitive search.
-- Remove a task from the list or even clear the whole list
-- All tasks are added to The local storage to keep them there even if the page reloaded.
+- Select between two game options static and dynamic range with 3 tries of playing.
+- Static range the user guesses a number between 1 and 10.
+- Dynamic range the user sets the range by setting min and max numbers.
+- Can guess until the 3 tries finish or you guess the correct number and win.
+- Can play again and get a new 3 tries by clicking play again button.
 
 ### Screenshot
 
 - Desktop view
 
-![](Static/screen.jpeg)
+![](static/screen.jpeg)
 
 ### Links
 
-- Live Site URL: [Todo-List](https://mahmoudsmohammed.github.io/Todo-List/)
+- Live Site URL : [Number-Guesser](https://mahmoudsmohammed.github.io/Number-Guesser/)
 
 ## My process
 
@@ -47,23 +48,20 @@ Users should be able to:
 
 - How structure the project files.
 - Using Git and Github.
-- Use SASS and learn how to structure my files to be easy to debug.
-- SASS Placeholder, Variables, and Mixins which save a lot of time.
+- Use SASS and learn how to use Nesting which makes select elements much easier.
 - Make event delegation to create a task on a specific child element.
-- Dealing With local storage to store data and keep it up to date with any change.
+- Functional programming by making each task at spread function to make code easy to debug and maintain.
 
 ```Js
-function store(task) {
-  let tasks;
-  if (localStorage.tasks === undefined) {
-    tasks = [];
-    tasks.push(task);
-    localStorage.tasks = JSON.stringify(tasks);
-  } else {
-    tasks = JSON.parse(localStorage.tasks);
-    tasks.push(task);
-    localStorage.tasks = JSON.stringify(tasks);
-  }
+function showMessage(msg, color) {
+  guess.style.borderColor = color;
+  result.style.display = 'block';
+  result.textContent = msg;
+  result.style.backgroundColor = color === 'green' ? '#10d389' : '#f8d7da';
+  result.style.color = color;
+}
+function createRandom(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 ```
 
